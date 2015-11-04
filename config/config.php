@@ -44,8 +44,9 @@ array_insert($GLOBALS['BE_MOD'],1,array
 	'liwiManager' =>array(
 		'members' 		=> array
 		(
-				'tables' 		=> array('tl_fzh_members'),
+				'tables' 		=> array('tl_fzh_members','tl_fzh_documents'),
 				'export'	 	=> array('FzhMembers','exportXLS'),
+				'downloadDocument'=> array('FzhMembers','downloadDocument'),
 				'icon' 	 		=> 'system/modules/fzh-members/assets/user_red.png',
 				'stylesheet'	=> 'system/modules/fzh-members/assets/style.css'
 		

@@ -68,3 +68,4 @@ $GLOBALS['TL_LANG']['tl_fzh_members']['edit']   	= array('Mitglied bearbeiten', 
 $GLOBALS['TL_LANG']['tl_fzh_members']['cut']    	= array('Mitglied verschieben', 'Mitglied ID %s verschieben');
 $GLOBALS['TL_LANG']['tl_fzh_members']['copy']   	= array('Mitglied duplizieren', 'Mitglied ID %s duplizieren');
 $GLOBALS['TL_LANG']['tl_fzh_members']['delete'] 	= array('Mitglied löschen', 'Mitglied ID %s löschen');
+$GLOBALS['TL_LANG']['tl_fzh_members']['documents'] 	= array('Dokumente zum Mitglied anzeigen', 'Dokumente zu Mitglied ID %s anzeigen');

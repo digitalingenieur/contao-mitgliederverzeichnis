@@ -75,24 +75,19 @@ $GLOBALS['TL_DCA']['tl_fzh_members'] = array
 				'href'                => 'act=edit',
 				'icon'                => 'edit.gif'
 			),
-			/*'copy' => array
-			(
-				'label'               => &$GLOBALS['TL_LANG']['tl_fzh_members']['copy'],
-				'href'                => 'act=copy',
-				'icon'                => 'copy.gif'
-			),*/
-			/*'delete' => array
-			(
-				'label'               => &$GLOBALS['TL_LANG']['tl_fzh_members']['delete'],
-				'href'                => 'act=delete',
-				'icon'                => 'delete.gif',
-				'attributes'          => 'onclick="if(!confirm(\'' . $GLOBALS['TL_LANG']['MSC']['deleteConfirm'] . '\'))return false;Backend.getScrollOffset()"'
-			),*/
 			'show' => array
 			(
 				'label'               => &$GLOBALS['TL_LANG']['tl_fzh_members']['show'],
 				'href'                => 'act=show',
 				'icon'                => 'show.gif'
+			),
+			'documents' => array
+			(
+				'label'               => &$GLOBALS['TL_LANG']['tl_fzh_members']['documents'],
+				'href'                => 'table=tl_fzh_documents&popup=1',
+				'icon'                => 'system/modules/fzh-members/assets/page_white_stack.png',
+				'attributes'          => 'onclick="Backend.openModalIframe({\'width\':765,\'title\':\''.$GLOBALS['TL_LANG']['tl_fzh_members']['documents'][1].'\',\'url\':this.href});return false"',
+				'button_callback' 	  => array('tl_fzh_members','showDocuments')
 			)
 		)
 	),
@@ -368,6 +363,21 @@ class tl_fzh_members extends Backend
 		}
 		$activeModel->save();
 		
+	}
+
+		/**
+	 * Return the edit modules button
+	 * @param array
+	 * @param string
+	 * @param string
+	 * @param string
+	 * @param string
+	 * @param string
+	 * @return string
+	 */
+	public function showDocuments($row, $href, $label, $title, $icon, $attributes)
+	{
+		return '<a href="'.$this->addToUrl($href.'&amp;id='.$row['id']).'" title="'.specialchars($title).'"'.$attributes.'>'.Image::getHtml($icon, $label).'</a> ';
 	}
 
 }

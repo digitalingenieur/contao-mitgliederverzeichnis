@@ -22,7 +22,6 @@ class FzhMembers extends Backend{
 			$header = ($countRows == 0)? true : false; 
 			foreach($members->row() as $key => $data){
 				switch($key){
-					case 'id':
 					case 'tstamp': 
 					case 'memberState':
 						continue 2;
@@ -62,6 +61,11 @@ class FzhMembers extends Backend{
 			$countRows++;
 		}
 		$xls->sendfile(\Date::parse('Ymd').'-FZH Mitglieder.xls');
+	}
+
+	public function downloadDocument($dca){
+		$file = new File($dca->id);
+		$file->sendToBrowser();
 	}	
 }
 
