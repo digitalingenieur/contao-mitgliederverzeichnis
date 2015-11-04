@@ -20,7 +20,11 @@ System::loadLanguageFile('tl_files');
  */
 if (Input::get('do') == 'members')
 {
+	$rootFolder = new Folder('fzh-members-documents');
+	$rootFolder->protect();
+
 	$folder = new Folder('fzh-members-documents/'.Input::get('id'));
+
 	Config::set('uploadPath', $folder->path);
 
 	//Config::set('editableFiles', Config::get('templateFiles'));
