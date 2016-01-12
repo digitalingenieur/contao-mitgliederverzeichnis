@@ -108,7 +108,7 @@ $GLOBALS['TL_DCA']['tl_fzh_members'] = array
 	'palettes' => array
 	(
 		'__selector__'                => array('directDebitingSystem'),
-		'default'                     => '{personal_legend},name,surname,birthday,gender;{address_legend},street,zip,city,country,addressNotAvailable;{contact_legend},mail,newsletter,phone;{accountData_legend},directDebitingSystem;{administration_legend},entrySource,joiningDate,exitDate,memberState,exitReason,ransomed;'
+		'default'                     => '{personal_legend},name,surname,birthday,gender;{address_legend},street,zip,city,country,addressNotAvailable;{contact_legend},mail,phone;{accountData_legend},directDebitingSystem;{administration_legend},entrySource,joiningDate,exitDate,memberState,exitReason,ransomed;'
 	),
 
 	// Subpalettes
@@ -336,7 +336,7 @@ $GLOBALS['TL_DCA']['tl_fzh_members'] = array
 			'exclude'                 => true,
 			'sorting'				  => true,
 			'inputType'               => 'select',
-			'options'				  => array('website','altbestand'),
+			'options'				  => array('website','altbestand','altbestandBestaetigt'),
 			'reference'				  => &$GLOBALS['TL_LANG']['tl_fzh_members']['entrySource'],
 			'eval'                    => array('rgxp' => 'alpha', 'mandatory' => true, 'maxlength'=>255 ),
 			'sql'                     => "varchar(255) NOT NULL default ''"

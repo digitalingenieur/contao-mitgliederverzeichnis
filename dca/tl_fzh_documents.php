@@ -25,7 +25,8 @@ if (Input::get('do') == 'members')
 
 	$folder = new Folder('fzh-members-documents/'.Input::get('id'));
 
-	Config::set('uploadPath', $folder->path);
+	//Config::set('uploadPath', $folder->path);
+	$GLOBALS['TL_CONFIG']['uploadPath'] = $folder->path;
 
 	//Config::set('editableFiles', Config::get('templateFiles'));
 }

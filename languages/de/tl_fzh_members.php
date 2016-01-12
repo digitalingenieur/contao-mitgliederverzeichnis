@@ -55,6 +55,7 @@ $GLOBALS['TL_LANG']['tl_fzh_members']['gender']['male'] = 'Männlich';
 $GLOBALS['TL_LANG']['tl_fzh_members']['gender']['female'] = 'Weiblich';
 $GLOBALS['TL_LANG']['tl_fzh_members']['entrySource']['website'] = 'Website';
 $GLOBALS['TL_LANG']['tl_fzh_members']['entrySource']['altbestand'] = 'Altbestand';
+$GLOBALS['TL_LANG']['tl_fzh_members']['entrySource']['altbestandBestaetigt'] = 'Bestätigt';
 
 
 
